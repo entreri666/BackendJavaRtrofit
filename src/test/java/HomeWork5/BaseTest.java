@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeAll;
 import retrofit2.Retrofit;
 
 public abstract class BaseTest {
+    int productId;
     static Retrofit client;
     static ProductService productService;
     static CategoryService categoryService;

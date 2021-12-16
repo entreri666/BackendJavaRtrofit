@@ -1,6 +1,7 @@
 package HomeWork5.Service;
 
 import HomeWork5.Dto.Product;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.*;
 
@@ -19,5 +20,8 @@ public interface ProductService {
 
     @PUT("products")
     Call<Product> modifyProduct(@Body Product product);
+
+    @DELETE("products/{id}")
+    Call<ResponseBody> deleteProduct(@Path("id") Integer id);
 
 }
